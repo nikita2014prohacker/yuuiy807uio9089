@@ -260,7 +260,7 @@ def check_and_change_level(message):
 
 
 
-bot = telebot.TeleBot('8780791669:AAF39ExUdwiDiywTw6OWP8Ztlq3ziiMSVc0')
+bot = telebot.TeleBot('8780791669:AAHhUNbDh3Q3VJv2yR0NmiBKxTJcR2flbFw')
 
 @bot.callback_query_handler(func=lambda callback: True)
 def del_govno(callback):
