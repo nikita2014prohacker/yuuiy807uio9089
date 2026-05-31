@@ -462,8 +462,12 @@ def show_top(message):
             continue
         else:
             begs = len(bege_data['Users'][user]['user_begemotiki']['default_user_begemotiki']) + len(bege_data['Users'][user]['user_begemotiki']['elite_user_begemotiki'])
-            chat = bot.get_chat(user)
-            name = f'{chat.first_name}'
+            try:
+                chat = bot.get_chat(user)
+                name = f'{chat.first_name}'
+            except:
+                name = user
+                
             top[name] = begs
             
     top_10 = sorted(top.items(), key=itemgetter(1), reverse=True)  
